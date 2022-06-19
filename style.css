@@ -1,21 +1,101 @@
+* {
+    box-sizing: border-box;
+}
 /*body*/
+body {
+    margin: 0;
+    background: green;
+}
 
 /*overlay text*/
+.overlay-text{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.overlay-text-small{
+    font-size: .3em;
+}
+
+.overlay-text.visible {
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 300px;
+    margin-right: 300px;
+    flex-direction: column;
+}
+
 
 /*Page title*/
-
+.page-title {
+    color: rgb(209, 162, 33);
+    font-family:serif;
+    text-align: center;
+    font-weight: normal;
+    font-size: 4em;
+    margin-bottom: -40px;
+    margin-top: 10px;
+}
 /*Score container*/
-
+.score-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content:space-around;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    outline: 8px double black; 
+    border-radius: 2px;
+    color: white;
+}
 /*Score and time*/
+.score {
+    font-family: serif;
+    font-size: 2em;
+}
 
 /*game container*/
+.game-container{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 8px;
+    margin: 50px;
+    justify-content: center;
 
+}
 /*card location*/
+.card{
+    position: relative;
+    height: 175px;
+    width: 175px;
+}
 
 /*card face*/
-
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    border-width: 4px;
+    border-style: solid;
+}
 /*card back*/
-
+.card-back {
+    background-color: red;
+    border-color: black;
+}
 /**/
 /**/
 /**/
