@@ -106,6 +106,14 @@ body {
     top: 0;
     left: 0;
 }
+
+.card-value{
+    position: absolute;
+    width: 175px;
+    height: 175px;
+    top: 0;
+    left: 0;
+}
 /**/
 /**/
 /**/
