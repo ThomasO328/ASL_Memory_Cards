@@ -4,11 +4,14 @@
 /*body*/
 body {
     margin: 0;
-    background: green;
+    background: darkolivegreen;
 }
 p {
     font-size: .3em;
     text-align: center;
+}
+h6 {
+    margin-bottom: 0;
 }
 
 /*overlay text*/
@@ -44,7 +47,7 @@ p {
 
 /*Page title*/
 .page-title {
-    color: rgb(209, 162, 33);
+    color: rgb(238, 184, 36);
     font-family:serif;
     text-align: center;
     font-weight: normal;
