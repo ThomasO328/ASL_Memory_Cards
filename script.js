@@ -131,13 +131,3 @@ if(document.readyState === 'loading'){
     ready();
 }
 
-
-
-// card flip on mouse click
-
-// count number of flips
-
-// keep flipped if match
-
-// flip back over if not a match
-
