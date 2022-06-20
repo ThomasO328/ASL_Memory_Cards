@@ -6,6 +6,10 @@ body {
     margin: 0;
     background: green;
 }
+p {
+    font-size: .3em;
+    text-align: center;
+}
 
 /*overlay text*/
 .overlay-text{
@@ -33,6 +37,7 @@ body {
     margin-left: 300px;
     margin-right: 300px;
     flex-direction: column;
+    animation: overlay-grow 500ms forwards;
 }
 
 
@@ -92,11 +97,16 @@ body {
     border-width: 4px;
     border-style: solid;
     overflow: hidden;
+    transition: transform 500ms ease-in-out;
 }
+
 /*card back*/
 .card-back {
     background-color: red;
     border-color: black;
+}
+.card-front {
+    transform: rotateY(180deg);
 }
 
 .love-sign {
@@ -113,6 +123,36 @@ body {
     height: 175px;
     top: 0;
     left: 0;
+}
+.card.visible .card-back{
+    transform: rotateY(-180deg);
+}
+.card.visible .card-front{
+    transform: rotateY(0);
+}
+
+@keyframes overlay-grow {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 0;
+
+    }
+    to {
+        background-color: rgba(0, 0, 0, .8);
+        font-size: 6em;
+        border: 6px solid white;
+        border-radius: 16px;
+    }
+}
+@media(max-width: 800px) {
+    .game-container {
+        grid-template-columns: repeat(4, auto);
+    }
+
+    .score-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 /**/
 /**/
