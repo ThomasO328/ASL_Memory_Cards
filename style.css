@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
 }
-/*body*/
 body {
     margin: 0;
     background: darkolivegreen;
@@ -13,8 +12,6 @@ p {
 h6 {
     margin-bottom: 0;
 }
-
-/*overlay text*/
 .overlay-text{
     position: fixed;
     top: 0;
@@ -44,8 +41,6 @@ h6 {
     animation: overlay-grow 500ms forwards;
 }
 
-
-/*Page title*/
 .page-title {
     color: rgb(238, 184, 36);
     font-family:serif;

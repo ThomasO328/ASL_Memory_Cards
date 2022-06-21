@@ -6,7 +6,6 @@ class totalScore{
         this.timer = document.getElementById('time-remaining');
         this.ticker = document.getElementById('flips');
     }
-    // start timer, flip count, shuffle card
     startGame() {
         this.cardToCheck = null;
         this.totalClicks = 0;
@@ -22,7 +21,6 @@ class totalScore{
         this.timer.innerText = this.timeRemaining;
         this.ticker.innerText = this.totalClicks;
     }
-    //flip cards down starting new game
     hideCards() {
         this.cardsArray.forEach(card => {
             card.classList.remove('visible');
@@ -35,17 +33,12 @@ class totalScore{
            this.totalClicks++;
            this.ticker.innerText = this.totalClicks; 
            card.classList.add('visible')
-
-           //if statement
            if(this.cardToCheck)
                 this.checkForCardMatch(card);
-           //check for match
            else
                 this.cardToCheck = card;
-        
         }
     }
-    //check for card match
     checkForCardMatch(card) {
         if(this.getCardType(card) === this.getCardType(this.cardToCheck))
             this.cardMatch(card, this.cardToCheck);
@@ -54,7 +47,6 @@ class totalScore{
 
         this.cardToCheck = null;
     }
-    //keep cards face up if match
     cardMatch(card1, card2) {
         this.matchedCards.push(card1);
         this.matchedCards.push(card1);
@@ -63,7 +55,6 @@ class totalScore{
         if(this.matchedCards.length === this.cardsArray.length)
             this.youWin();
     }
-    //flip cards back down if not a match
     cardMisMatch(card1, card2) {
         this.busy = true;
         setTimeout(() => {
@@ -75,7 +66,6 @@ class totalScore{
     getCardType(card) {
         return card.getElementsByClassName('card-value')[0].src;
     }
-    //Game over screen when time runs out
     startCountDown(){
         return setInterval(() => {
             this.timeRemaining--;
@@ -92,7 +82,6 @@ class totalScore{
         clearInterval(this.countDown);
         document.getElementById('you-win').classList.add('visible');
     }
-    // shuffle cards
     shuffleCards(){
         for(let i = this.cardsArray.length - 1; i> 0; i--) {
             let randomIndex = Math.floor(Math.random() * (i+1));
@@ -100,8 +89,6 @@ class totalScore{
             this.cardsArray[i].style.order = randomIndex;
         }
     }
-
-
     canFlipCard(card) {
         return !this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck;
     }
