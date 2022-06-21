@@ -1,7 +1,7 @@
 # ASL Memory Cards
 
 ## Description
-- This is just a simple memory card game that also can maybe teach you a little American Sign Language(ASL).
+- This is just a simple memory card game that could also teach you a little American Sign Language(ASL).
 - How to win the game
     - Flip over 2 cards at a time trying to find matching cards.
     - Find all the matches before time runs out.
